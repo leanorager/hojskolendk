@@ -6,12 +6,13 @@ import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
+import ReviewCard from "../components/ReviewCard.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="p-4">
+  <main>
     <section id="hero"></section>
-    <section id="four_reasons" class="my-20">
+    <section id="four_reasons" class="my-20 p-4">
       <div
         class="grid grid-cols-2 grid-gap-10 lg:flex lg:justify-between lg:gap-20 lg:flex-row"
       >
@@ -45,7 +46,7 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </section>
-    <section id="intro" class="my-20">
+    <section id="intro" class="my-20 p-4">
       <div class="lg:grid lg:grid-cols-12 lg:gap-4">
         <Heading
           size="h2"
@@ -93,7 +94,78 @@ import Button from "../components/Button.astro";
       </div>
     </section>
     <section id="popular"></section>
-    <section id="reviews"></section>
+    <section id="reviews" class="bg-off-white py-20 lg:py-25">
+      <Heading
+        size="h1"
+        htmlheading="h1"
+        stylingclasses="px-4 pb-4 lg:px-0 lg:text-center lg:pb-10"
+        >Hvad mener andre?</Heading
+      >
+      <div
+        class="px-4 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex lg:flex-col lg:justify-end"
+      >
+        <div class="flex flex-row gap-6 py-5 w-max lg:px-0">
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+          <ReviewCard
+            review="Alt var super godt arrangeret, og man følte sig tryg hele vejen igennem. Jeg vil helt klart anbefale Højskolendk til alle, der overvejer en højskolerejse. Jeg kunne ikke have ønsket mig en bedre tur, og jeg ville til enhver tid gøre det igen!"
+            img="/img/catrine.webp"
+            submitter="Catrine"
+            trip="USA-turen"
+          />
+        </div>
+      </div>
+      <a href="https://dk.trustpilot.com/review/www.hojskolendk.dk">
+        <img
+          src="svg/trustpilot.svg"
+          alt="4.6 ud af 5 stjerner på Trustpilot"
+          class="px-4 pt-8"
+        />
+      </a>
+      <Text teksttype="p_smaller" stylingclasses="px-4 pt-3 text-dark-grey"
+        >Rated 4.6 out of 5 based on 140 reviews</Text
+      >
+    </section>
     <section id="sustainability"></section>
     <section id="info_meeting"></section>
     <section id="blog_posts"></section>

@@ -1,0 +1,31 @@
+---
+const { review, submitter, trip, align, img } = Astro.props;
+import Text from "../components/Text.astro";
+---
+
+<article
+  class="w-72 flex-shrink-0 rounded-[5px] bg-white p-4 flex flex-col gap-4 pt-12 lg:w-90"
+>
+  <img src="svg/citat-ikon.svg" alt="Citatikon" class="w-18" />
+
+  <Text teksttype="p_smaller" stylingclasses="text-dark-grey mb-10 mt-6">
+    {review}
+  </Text>
+
+  <div class="flex flex-row items-center justify-between">
+    <div class="flex flex-row items-center gap-2 mr-4">
+      <img src={img} alt="Portræt" class="w-7" />
+      <div class="flex flex-col">
+        <Text teksttype="p_smaller">
+          {submitter}
+        </Text>
+
+        <Text teksttype="p_mini" stylingclasses="text-dark-grey">
+          {trip}
+        </Text>
+      </div>
+    </div>
+
+    <img src="svg/stars.svg" alt="5 stjerner" />
+  </div>
+</article>
