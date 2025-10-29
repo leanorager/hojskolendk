@@ -11,7 +11,40 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
   <main class="container mx-auto p-4">
     <section id="hero"></section>
-    <section id="four_reasons"></section>
+    <section id="four_reasons">
+      <div
+        class="grid grid-cols-2 grid-gap-10 lg:flex lg:justify-between lg:gap-20 lg:flex-row"
+      >
+        <div class="reason flex flex-col items-center text-center gap-2">
+          <img src="svg/reason1.svg" alt="Ikon med tre personer" />
+          <Heading size="h4" htmlheading="h4">3000+ glade kunder</Heading>
+          <Text teksttype="p_medium" stylingclasses="text-dark-grey"
+            >Vi skaber minder, der varer livet ud.</Text
+          >
+        </div>
+        <div class="reason flex flex-col items-center text-center gap-2">
+          <img src="svg/reason2.svg" alt="Ikon med kuffert" />
+          <Heading size="h4" htmlheading="h4">15 års erfaring</Heading>
+          <Text teksttype="p_medium" stylingclasses="text-dark-grey"
+            >Vi ved, hvad der skaber uforglemmelige oplevelser.</Text
+          >
+        </div>
+        <div class="reason flex flex-col items-center text-center gap-2">
+          <img src="svg/reason3.svg" alt="Ikon med globus" />
+          <Heading size="h4" htmlheading="h4">25+ rejsedestinationer</Heading>
+          <Text teksttype="p_medium" stylingclasses="text-dark-grey"
+            >Eventyr og oplevelser på alle verdensdele.</Text
+          >
+        </div>
+        <div class="reason flex flex-col items-center text-center gap-2">
+          <img src="svg/reason4.svg" alt="Ikon med træ" />
+          <Heading size="h4" htmlheading="h4">50 træer plantet</Heading>
+          <Text teksttype="p_medium" stylingclasses="text-dark-grey"
+            >For hver elev, der rejser med os.</Text
+          >
+        </div>
+      </div>
+    </section>
     <section id="intro"></section>
     <section id="popular"></section>
     <section id="reviews"></section>

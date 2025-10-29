@@ -1,15 +1,14 @@
 ---
 // Henter parametrene fra Astro.props
-const { teksttype="p_regular", stylingclasses=""} = Astro.props; 
- 
+const { teksttype = "p_regular", stylingclasses = "" } = Astro.props;
+
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-  p_regular: "text-[14px] lg:text-[16px] font-normal",
-  p_medium: "text-[14px] lg:text-[16px] font-medium",
-  p_smaller: "text-[12px] lg:text-[14px] font-normal",
+  p_regular: "text-[13px] lg:text-[16px] font-normal",
+  p_medium: "text-[13px] lg:text-[16px] font-medium",
+  p_smaller: "text-[13px] lg:text-[14px] font-normal",
   p_mini: "text-[12px] lg:text-[12px] font-normal",
 };
-
-
 ---
+
 <p class:list={[sizeClasses[teksttype], stylingclasses]}><slot /></p>
