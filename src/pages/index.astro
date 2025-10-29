@@ -9,34 +9,34 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Titel">
-  <main class="container mx-auto p-4">
+  <main class="p-4">
     <section id="hero"></section>
-    <section id="four_reasons">
+    <section id="four_reasons" class="my-20">
       <div
         class="grid grid-cols-2 grid-gap-10 lg:flex lg:justify-between lg:gap-20 lg:flex-row"
       >
-        <div class="reason flex flex-col items-center text-center gap-2">
+        <div class="reason flex flex-col items-center text-center gap-2 mb-5">
           <img src="svg/reason1.svg" alt="Ikon med tre personer" />
           <Heading size="h4" htmlheading="h4">3000+ glade kunder</Heading>
           <Text teksttype="p_medium" stylingclasses="text-dark-grey"
             >Vi skaber minder, der varer livet ud.</Text
           >
         </div>
-        <div class="reason flex flex-col items-center text-center gap-2">
+        <div class="reason flex flex-col items-center text-center gap-2 mb-5">
           <img src="svg/reason2.svg" alt="Ikon med kuffert" />
           <Heading size="h4" htmlheading="h4">15 års erfaring</Heading>
           <Text teksttype="p_medium" stylingclasses="text-dark-grey"
             >Vi ved, hvad der skaber uforglemmelige oplevelser.</Text
           >
         </div>
-        <div class="reason flex flex-col items-center text-center gap-2">
+        <div class="reason flex flex-col items-center text-center gap-2 mb-5">
           <img src="svg/reason3.svg" alt="Ikon med globus" />
           <Heading size="h4" htmlheading="h4">25+ rejsedestinationer</Heading>
           <Text teksttype="p_medium" stylingclasses="text-dark-grey"
             >Eventyr og oplevelser på alle verdensdele.</Text
           >
         </div>
-        <div class="reason flex flex-col items-center text-center gap-2">
+        <div class="reason flex flex-col items-center text-center gap-2 mb-5">
           <img src="svg/reason4.svg" alt="Ikon med træ" />
           <Heading size="h4" htmlheading="h4">50 træer plantet</Heading>
           <Text teksttype="p_medium" stylingclasses="text-dark-grey"
@@ -45,7 +45,53 @@ import Button from "../components/Button.astro";
         </div>
       </div>
     </section>
-    <section id="intro"></section>
+    <section id="intro" class="my-20">
+      <div class="lg:grid lg:grid-cols-12 lg:gap-4">
+        <Heading
+          size="h2"
+          htmlheading="h2"
+          stylingclasses="mb-20 lg:col-start-1 lg:col-end-7 lg:mb-8"
+          >Hos HÖJSKOLENDK handler det ikke bare om at rejse – det handler om at
+          mærke verden, grine højt, skabe minder for livet og finde ud af, hvem
+          du er, når du deler eventyret med andre, der vil det samme som dig.</Heading
+        >
+        <Heading
+          size="h4"
+          htmlheading="h4"
+          stylingclasses="mb-2 lg:col-start-1 lg:col-end-4">Hvem er vi?</Heading
+        >
+        <Text
+          teksttype="p_regular"
+          stylingclasses="mb-8 lg:col-start-4 lg:col-end-7 lg:mb-0"
+          >Hos HÖJSKOLENDK samler vi unge fra hele Danmark om det, vi brænder
+          for: fællesskab, eventyr og mødet med verden. Vi er en dansk højskole
+          i udlandet for dig mellem 18 og 30 år, der vil ud at opleve, lære og
+          vokse – sammen med andre. Her handler det om mere end at rejse; det
+          handler om at dele store oplevelser, få nye venner og skabe minder,
+          der varer ved. Vi tror på, at de bedste oplevelser opstår, når man
+          rejser i et trygt fællesskab, hvor nysgerrighed, humor og ægte
+          sammenhold binder alt sammen.</Text
+        >
+        <Text
+          teksttype="p_regular"
+          stylingclasses="mb-8  lg:col-start-4 lg:col-end-7"
+          >Et ophold med HÖJSKOLENDK er derfor mere end en rejse – det er et
+          eventyr, der styrker både modet, selvtilliden og sammenholdet. Du
+          rejser med danske undervisere og andre unge, der – ligesom dig – vil
+          ud at mærke verden på den ægte måde. Undervejs får du uforglemmelige
+          oplevelser, møder nye kulturer og opdager sider af dig selv, du ikke
+          vidste fandtes. Samtidig får du et trygt og inspirerende rum til
+          refleksion og personlig udvikling, hvor fællesskabet altid er i
+          centrum. Vi lover dig ikke bare en rejse ud i verden – men også et
+          skridt tættere på dig selv.</Text
+        >
+        <img
+          src="img/strand-intro.webp"
+          alt="Strandbillede med unge mennesker"
+          class="lg:col-start-8 lg:col-end-13 lg:row-start-1 lg:row-end-4 m-auto"
+        />
+      </div>
+    </section>
     <section id="popular"></section>
     <section id="reviews"></section>
     <section id="sustainability"></section>
