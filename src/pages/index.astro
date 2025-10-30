@@ -10,11 +10,14 @@ import ReviewCard from "../components/ReviewCard.astro";
 import BlogPostCard1 from "../components/BlogPostCard1.astro";
 import BlogPostCard2 from "../components/BlogPostCard2.astro";
 import PopularCard from "../components/PopularCard.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <MainLayout title="Titel">
   <main>
-    <section id="hero"></section>
+    <section id="hero">
+      <Hero />
+    </section>
     <section id="four_reasons" class="my-20 p-4">
       <div
         class="grid grid-cols-2 grid-gap-10 lg:flex lg:justify-between lg:gap-20 lg:flex-row"
