@@ -155,16 +155,22 @@ import ReviewCard from "../components/ReviewCard.astro";
           />
         </div>
       </div>
-      <a href="https://dk.trustpilot.com/review/www.hojskolendk.dk">
-        <img
-          src="svg/trustpilot.svg"
-          alt="4.6 ud af 5 stjerner på Trustpilot"
-          class="px-4 pt-8"
-        />
-      </a>
-      <Text teksttype="p_smaller" stylingclasses="px-4 pt-3 text-dark-grey"
-        >Rated 4.6 out of 5 based on 140 reviews</Text
-      >
+      <div class="flex flex-row justify-between items-center px-4 pt-8">
+        <div>
+          <a href="https://dk.trustpilot.com/review/www.hojskolendk.dk">
+            <img
+              src="svg/trustpilot.svg"
+              alt="4.6 ud af 5 stjerner på Trustpilot"
+            />
+          </a>
+          <Text teksttype="p_smaller" stylingclasses="pt-3 text-dark-grey"
+            >Rated 4.6 out of 5 based on 140 reviews</Text
+          >
+        </div>
+        <div class="flex justify-end">
+          <img src="svg/arrows.svg" alt="Pile ikoner" class="w-20" />
+        </div>
+      </div>
     </section>
     <section id="sustainability" class="px-4 py-20 lg:pb-20">
       <div class="lg:grid lg:grid-cols-12 lg:gap-4">
