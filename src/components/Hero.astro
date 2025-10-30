@@ -14,9 +14,78 @@ import Button from "../components/Button.astro";
     <p
       class="text-[var(--color-white)] font-medium tracking-tight leading-none
              text-[clamp(3rem,16vw,50rem)]
-             w-[100vw] -ml-[calc((100vw-100%)/2)]"
+             w-[100vw] -ml-[calc((100vw-100%)/2)] animate-hero-fadein-down"
     >
       UDFORSK
     </p>
+    <p
+      class="mt-4 text-white text-4xl font-semibold h-[2.5em] flex items-center justify-center"
+    >
+      <span
+        id="destination"
+        class="inline-block transition-all duration-700 opacity-0 translate-y-4"
+      ></span>
+    </p>
+  </div>
+  <script>
+    const destinations = [
+      "- COSTA RICA -",
+      "- BRASILIEN -",
+      "- PERU -",
+      "- PANAMA -",
+      "- VIETNAM -",
+      "- JAPAN -",
+      "- AUSTRALIEN -",
+    ];
+    let i = 0;
+    const el = document.getElementById("destination");
+    function showDestination(idx) {
+      el.style.opacity = 0;
+      el.style.transform = "translateY(16px)";
+      setTimeout(() => {
+        el.textContent = destinations[idx];
+        el.style.opacity = 1;
+        el.style.transform = "translateY(0)";
+      }, 300);
+    }
+    showDestination(i);
+    setInterval(() => {
+      i = (i + 1) % destinations.length;
+      showDestination(i);
+    }, 2000);
+  </script>
+
+  <!--make Hero-fg be the foreground on the herosection -->
+
+  <div
+    class="absolute inset-0 flex items-center justify-center pointer-events-none translate-y-[15vh]"
+  >
+    <img
+      src="/img/Hero-fg.png"
+      alt="Hero foreground image"
+      class="max-w-full h-auto animate-hero-fadein"
+    />
+  </div>
+
+  <!-- CTA knapper nederst i hero -->
+  <div
+    class="absolute bottom-20 w-full flex flex-row items-center justify-center gap-8 pointer-events-auto"
+  >
+    <Button
+      variant="primary"
+      size="large"
+      heading={{ htmlheading: "span", size: "h4", stylingclasses: "" }}
+      stylingclasses="w-[320px] animate-hero-fadein"
+    >
+      Tilmeld dig infomøde
+    </Button>
+    <Button
+      variant="secondary"
+      size="large"
+      heading={{ htmlheading: "span", size: "h4", stylingclasses: "" }}
+      stylingclasses="w-[320px] animate-hero-fadein"
+    >
+      Se alle desinationer
+    </Button>
   </div>
 </section>

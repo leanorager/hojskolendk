@@ -91,4 +91,31 @@
 }
 
 @layer utilities {
+  @keyframes hero-fadein {
+    0% {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-hero-fadein {
+    animation: hero-fadein 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+  }
+
+  @keyframes hero-fadein-down {
+    0% {
+      opacity: 0;
+      transform: translateY(-60px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-hero-fadein-down {
+    animation: hero-fadein-down 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+  }
 }
