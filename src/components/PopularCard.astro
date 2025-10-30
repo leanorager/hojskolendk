@@ -1,0 +1,44 @@
+---
+const { days, destination, price, text, img } = Astro.props;
+import Text from "../components/Text.astro";
+import Heading from "./Heading.astro";
+import Button from "../components/Button.astro";
+---
+
+<article
+  class="popular-card flex flex-col gap-2 pt-50 px-4 pb-20 lg:grid lg:grid-cols-12 lg:gap-4"
+  style={`background-image: url('${img}'); background-size: cover; background-position: center;`}
+>
+  <Heading
+    size="h4"
+    htmlheading="h4"
+    stylingclasses="text-white lg:col-start-1 lg:col-end-6 lg:pl-10"
+  >
+    {days} dage gennem</Heading
+  >
+  <Heading
+    size="h1"
+    htmlheading="h1"
+    stylingclasses="text-orange uppercase pr-10 lg:col-start-1 lg:col-end-6 lg:pl-10"
+  >
+    {destination}</Heading
+  >
+  <Heading
+    size="h4"
+    htmlheading="h4"
+    stylingclasses="text-white pt-4 lg:col-start-1 lg:col-end-6 lg:pl-10"
+  >
+    Fra {price}DKK</Heading
+  >
+  <Text
+    teksttype="p_medium"
+    stylingclasses="text-off-white pb-8 max-w-xs lg:col-start-1 lg:col-end-6 lg:pl-10 lg:max-w-lg"
+    >{text}</Text
+  >
+  <div
+    class="flex flex-row justify-between items-center lg:col-start-1 lg:col-end-13 lg:px-10"
+  >
+    <Button variant="primary">Læs mere</Button>
+    <img src="svg/arrows.svg" alt="Pile" />
+  </div>
+</article>

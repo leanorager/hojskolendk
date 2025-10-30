@@ -9,6 +9,7 @@ import Button from "../components/Button.astro";
 import ReviewCard from "../components/ReviewCard.astro";
 import BlogPostCard1 from "../components/BlogPostCard1.astro";
 import BlogPostCard2 from "../components/BlogPostCard2.astro";
+import PopularCard from "../components/PopularCard.astro";
 ---
 
 <MainLayout title="Titel">
@@ -95,7 +96,25 @@ import BlogPostCard2 from "../components/BlogPostCard2.astro";
         />
       </div>
     </section>
-    <section id="popular"></section>
+    <section id="popular">
+      <Heading
+        size="h1"
+        htmlheading="h1"
+        stylingclasses="border-b-1 border-black pb-4 mx-4 mb-10 lg:col-start-1 lg:col-end-13"
+        >Populære rejser</Heading
+      >
+      <div>
+        <div>
+          <PopularCard
+            img="/img/rejse1.webp"
+            days="60"
+            destination="Brasilien, Mexico, Costa Rica, & Colombia"
+            price="57.900"
+            text="Oplev farverige kulturer, tropiske regnskove og pulserende byer, mens du rejser gennem Mexico, Costa Rica og Colombia. Tre lande, uendelige oplevelser – klar til at skabe minder for livet."
+          />
+        </div>
+      </div>
+    </section>
     <section id="reviews" class="bg-off-white py-20 lg:py-25">
       <Heading
         size="h1"
