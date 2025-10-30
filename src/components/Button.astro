@@ -6,6 +6,7 @@ const {
   size = "medium",
   label,
   heading = {},
+  stylingclasses = "",
 } = Astro.props;
 
 const base =
@@ -28,7 +29,7 @@ const headingSize = heading.size ?? "h4";
 const headingStyling = heading.stylingclasses ?? "";
 ---
 
-<button class:list={[base, variants[variant], sizes[size]]}>
+<button class:list={[base, variants[variant], sizes[size], stylingclasses]}>
   <Heading
     htmlheading={headingHtml}
     size={headingSize}
