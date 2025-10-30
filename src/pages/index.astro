@@ -273,14 +273,21 @@ import BlogPostCard2 from "../components/BlogPostCard2.astro";
       id="info_meeting"
       class="bg-off-white px-4 py-20 lg:grid lg:grid-cols-12 lg:gap-4 lg:py-25"
     >
-      <div class="lg:flex lg:flex-col lg:col-start-1 lg:col-end-4">
-        <Heading size="h1" htmlheading="h1" stylingclasses="pb-5"
-          >Kommende infomøder</Heading
-        >
-        <Text teksttype="p_regular" stylingclasses="pb-8"
-          >Kig forbi et af vores hyggelige infomøder i København, Aarhus eller
-          online – vi glæder os til at møde dig!</Text
-        >
+      <div
+        class="lg:flex lg:flex-col lg:col-start-1 lg:col-end-4 lg:justify-between"
+      >
+        <div>
+          <Heading size="h1" htmlheading="h1" stylingclasses="pb-5"
+            >Kommende infomøder</Heading
+          >
+          <Text teksttype="p_regular" stylingclasses="pb-8"
+            >Kig forbi et af vores hyggelige infomøder i København, Aarhus eller
+            online – vi glæder os til at møde dig!</Text
+          >
+        </div>
+        <div class="hidden lg:block">
+          <Button variant="secondary">Tilmeld dig infomøde</Button>
+        </div>
       </div>
       <div
         class="grid grid-cols-2 gap-4 place-items-center lg:flex lg:flex-row lg:col-start-5 lg:col-end-13"
@@ -318,6 +325,9 @@ import BlogPostCard2 from "../components/BlogPostCard2.astro";
           >
           <Heading size="h3" htmlheading="h3" stylingclasses="">Online</Heading>
         </article>
+      </div>
+      <div class="flex justify-center mt-10 lg:hidden">
+        <Button variant="secondary">Tilmeld dig infomøde</Button>
       </div>
     </section>
     <section
