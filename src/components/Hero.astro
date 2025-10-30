@@ -19,7 +19,7 @@ import Button from "../components/Button.astro";
       UDFORSK
     </p>
     <p
-      class="mt-4 text-white text-4xl font-semibold h-[2.5em] flex items-center justify-center"
+      class="mt-4 text-white text-3xl lg:text-4xl font-semibold h-[2.5em] flex items-center justify-center"
     >
       <span
         id="destination"
@@ -58,21 +58,22 @@ import Button from "../components/Button.astro";
   <!--make Hero-fg be the foreground on the herosection -->
 
   <div
-    class="absolute inset-0 flex items-center justify-center pointer-events-none translate-y-[15vh]"
+    class="absolute inset-0 flex items-center justify-center pointer-events-none translate-y-[8vh] lg:translate-y-[15vh] overflow-hidden md:overflow-visible"
   >
     <img
       src="/img/Hero-fg.png"
       alt="Hero foreground image"
-      class="max-w-full h-auto animate-hero-fadein"
+      class="w-full h-full object-cover origin-center animate-hero-zoom
+           md:w-auto md:h-auto md:object-contain md:origin-center md:animate-hero-fadein"
     />
   </div>
 
   <!-- CTA knapper nederst i hero -->
   <div
-    class="absolute bottom-20 w-full flex flex-row items-center justify-center gap-8 pointer-events-auto"
+    class="absolute bottom-20 w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 pointer-events-auto"
   >
     <Button
-      variant="primary"
+      variant="secondary"
       size="large"
       heading={{ htmlheading: "span", size: "h4", stylingclasses: "" }}
       stylingclasses="w-[320px] animate-hero-fadein"
@@ -80,7 +81,7 @@ import Button from "../components/Button.astro";
       Tilmeld dig infomøde
     </Button>
     <Button
-      variant="secondary"
+      variant="primary"
       size="large"
       heading={{ htmlheading: "span", size: "h4", stylingclasses: "" }}
       stylingclasses="w-[320px] animate-hero-fadein"
