@@ -1,7 +1,119 @@
 ---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
+
+<footer class="bg-[var(--color-orange)] text-[var(--color-white)] pt-16">
+  <div class="grid grid-cols-12 gap-y-8 px-4 py-5 lg:gap-y-10 lg:gap-x-8">
+    <!-- 1) OM OS — mobil først, desktop højre kolonne øverst -->
+    <div
+      class="col-span-12 lg:col-start-7 lg:col-end-13 lg:row-start-1 lg:self-start"
+    >
+      <Text teksttype="p_regular"> Om os </Text>
+      <Heading htmlheading="h4" size="h4" stylingclasses="mb-2">
+        HÖJSKOLENDK er en dansk højskole, der tager dig med ud i verden. Vi
+        skaber højskoleophold i udlandet for unge, der drømmer om fællesskab,
+        eventyr og meningsfulde oplevelser. Hos os handler højskolelivet ikke om
+        klasselokaler – men om kulturmøder, natur, personlig udvikling og
+        uforglemmelige rejser med andre danske unge. Uanset om du drømmer om at
+        surfe på Balis bølger, opleve Japans kultur, vandre i Costa Ricas
+        regnskov eller mærke friheden i Australien, kan du glæde dig til trygge
+        rammer, dygtige undervisere og en rejse, der rykker dig – både som
+        menneske og som rejsende. Tag på højskole i udlandet, fyld rygsækken med
+        oplevelser for livet, og kom hjem med nye perspektiver, selvtillid og
+        venner for evigt.
+      </Heading>
     </div>
+
+    <!-- 2) KONTAKTINFO — mobil nr. 2, desktop venstre kolonne øverst -->
+    <div
+      class="col-span-12 lg:col-start-1 lg:col-end-7 lg:row-start-1 lg:self-start"
+    >
+      <div class="grid grid-cols-12 gap-y-6 lg:gap-y-8">
+        <div class="col-span-6">
+          <Text teksttype="p_smaller" stylingclasses="opacity-90">Telefon</Text>
+          <Heading htmlheading="span" size="h4">70 27 90 07</Heading>
+        </div>
+        <div class="col-span-6">
+          <Text teksttype="p_smaller" stylingclasses="opacity-90">Mail</Text>
+          <Heading htmlheading="span" size="h4">info@hojskolendk.dk</Heading>
+        </div>
+        <div class="col-span-6">
+          <Text teksttype="p_smaller" stylingclasses="opacity-90">Adresse</Text>
+          <Heading htmlheading="span" size="h4">
+            Rosenørns Allé 31<br />1970 Frederiksberg<br />Danmark
+          </Heading>
+        </div>
+        <div class="col-span-6">
+          <Text teksttype="p_smaller" stylingclasses="opacity-90">Socials</Text>
+          <ul class="space-y-1 font-semibold">
+            <li>
+              <a
+                class="underline underline-offset-2"
+                href="https://www.instagram.com/hojskolendk?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >Instagram ↗</a
+              >
+            </li>
+            <li>
+              <a
+                class="underline underline-offset-2"
+                href="https://www.facebook.com/hojskolendk?locale=da_DK"
+                >Facebook ↗</a
+              >
+            </li>
+            <li>
+              <a
+                class="underline underline-offset-2"
+                href="https://www.tiktok.com/@hojskolendk?is_from_webapp=1&sender_device=pc"
+                >Tiktok ↗</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- SAMARBEJDSPARTNERE -->
+    <div
+      class="col-span-12 lg:col-start-1 lg:col-end-7 lg:row-start-1 lg:mt-60"
+    >
+      <Heading htmlheading="h4" size="h4" stylingclasses="mb-3">
+        Samarbejdspartnere
+      </Heading>
+      <div class="flex flex-wrap items-center gap-6">
+        <img
+          class="h-auto lg:h-12"
+          src="/svg/samarbejdspartnere.svg"
+          alt="Samarbejdspartnere"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) WORDMARK — mobil til sidst, desktop fuld bredde under de to kolonner -->
+  <div
+    class="col-span-12 pt-6 lg:col-start-1 lg:col-end-13 lg:row-start-3 md:pt-20"
+  >
+    <p
+      class="font-logo font-bold leading-none tracking-tight
+         text-[clamp(3rem,16vw,50rem)]
+         w-[100vw] -ml-[calc((100vw-100%)/2)]
+         text-center lg:text-left"
+    >
+      HÖJSKOLENDK
+    </p>
+
+    <!-- Bottom bar -->
+    <div
+      class="col-span-12 flex flex-wrap gap-x-6 items-center opacity-90 pb-5 lg:justify-between"
+    >
+      <p class="text-[10px]">cvr: 23124325</p>
+      <a class="underline underline-offset-2 text-[10px]" href="#"
+        >Data- & Privatlivspolitik</a
+      >
+      <a class="underline underline-offset-2 text-[10px]" href="#">cookies</a>
+      <a class="underline underline-offset-2 text-[10px]" href="#"
+        >Handelsbetingelser</a
+      >
+    </div>
+  </div>
 </footer>
