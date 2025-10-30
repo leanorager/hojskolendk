@@ -4,12 +4,19 @@ import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
 
-<div
-  class="flex items-center h-screen w-full bg-cover bg-center"
-  style="background-image: url('/images/hero-background.jpg');"
+<!-- Hero container -->
+<section
+  class="relative h-screen w-full bg-cover bg-center"
+  style="background-image: url('/img/Hero-bg.png');"
 >
-  <p class="w-3/4 lg:w-1/2 mx-auto p-10 bg-slate-50 text-xl sticky top-1/4">
-    Well, the way they make shows is, they make one show. That show's called a
-    pilot.
-  </p>
-</div>
+  <!-- Sticky tekst: starter tættere på toppen via pt-*, og klistrer der -->
+  <div class="sticky top-0 pt-[20vh] lg:pt-[13vh] text-center">
+    <p
+      class="text-[var(--color-white)] font-medium tracking-tight leading-none
+             text-[clamp(3rem,16vw,50rem)]
+             w-[100vw] -ml-[calc((100vw-100%)/2)]"
+    >
+      UDFORSK
+    </p>
+  </div>
+</section>
