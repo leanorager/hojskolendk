@@ -4,7 +4,7 @@ import Text from "../components/Text.astro";
 ---
 
 <article
-  class="w-72 flex-shrink-0 rounded-[5px] bg-white p-4 flex flex-col gap-4 pt-12 lg:w-90"
+  class="w-80 flex-shrink-0 rounded-[5px] bg-white p-4 flex flex-col gap-4 pt-12 justify-between lg:w-90"
 >
   <img src="svg/citat-ikon.svg" alt="Citatikon" class="w-18" />
 
@@ -20,12 +20,12 @@ import Text from "../components/Text.astro";
           {submitter}
         </Text>
 
-        <Text teksttype="p_mini" stylingclasses="text-dark-grey">
+        <Text teksttype="p_mini" stylingclasses="text-dark-grey truncate">
           {trip}
         </Text>
       </div>
     </div>
 
-    <img src="svg/stars.svg" alt="5 stjerner" />
+    <img src="svg/stars.svg" alt="5 stjerner" class="w-[25] shrink" />
   </div>
 </article>
