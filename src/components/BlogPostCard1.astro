@@ -1,0 +1,33 @@
+---
+const {
+  img,
+  alttext,
+  topic,
+  date,
+  heading,
+  text,
+  stylingclasses = "",
+} = Astro.props;
+import Text from "../components/Text.astro";
+import Heading from "./Heading.astro";
+---
+
+<article
+  class:list={["bg-off-white mb-10 rounded-[5px] lg:mb-0", stylingclasses]}
+>
+  <img src={img} alt={alttext} class="" />
+  <div class="flex flex-row justify-between px-4 pt-4 pb-2">
+    <Text teksttype="p_medium" stylingclasses="text-orange">
+      {topic}
+    </Text>
+    <Text teksttype="p_medium" stylingclasses="text-orange">
+      {date}
+    </Text>
+  </div>
+  <Heading size="h1" htmlheading="h1" stylingclasses="px-4 lg:text-[20px]">
+    {heading}</Heading
+  >
+  <Text teksttype="p_smaller" stylingclasses="text-dark-grey px-4 pb-6 pt-2">
+    {text}
+  </Text>
+</article>

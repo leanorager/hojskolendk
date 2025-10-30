@@ -7,7 +7,8 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import ReviewCard from "../components/ReviewCard.astro";
-import BlogPostCard from "../components/BlogPostCard.astro";
+import BlogPostCard1 from "../components/BlogPostCard1.astro";
+import BlogPostCard2 from "../components/BlogPostCard2.astro";
 ---
 
 <MainLayout title="Titel">
@@ -319,36 +320,62 @@ import BlogPostCard from "../components/BlogPostCard.astro";
         </article>
       </div>
     </section>
-    <section id="blog_posts" class="px-4 py-20 lg:py-25">
+    <section
+      id="blog_posts"
+      class="px-4 py-20 md:py-25 lg:grid lg:grid-cols-12 lg:gap-4"
+    >
       <Heading
         size="h1"
         htmlheading="h1"
-        stylingclasses="border-b-1 border-black pb-4">Blog-indlæg</Heading
+        stylingclasses="border-b-1 border-black pb-4 lg:col-start-1 lg:col-end-13"
+        >Blog-indlæg</Heading
       >
-      <BlogPostCard
+      <Heading
+        size="h4"
+        htmlheading="h4"
+        stylingclasses="text-dark-grey pt-10 lg:row-start-2 lg:rox-end-3 lg:col-start-1 lg:col-end-7"
+        >Mest læste</Heading
+      >
+      <BlogPostCard1
         img="/img/blogpost1.webp"
         alttext="Natur, vandfald og tempel"
         topic="Rejseinspiration"
         date="4. Marts 2025"
         heading="5 destinationer, der ændrer måden du ser verden på"
         text="Vi har samlet fem unikke destinationer, hvor kultur, natur og mødet med mennesker giver dig oplevelser, du aldrig glemmer – og måske endda et nyt syn på livet."
+        stylingclasses="lg:col-start-1 lg:col-end-7 lg:row-start-3 lg:row-end-5"
       />
-      <BlogPostCard
+      <Heading
+        size="h4"
+        htmlheading="h4"
+        stylingclasses="text-dark-grey pt-2 lg:row-start-2 lg:col-start-7 lg:col-end-13 lg:pt-10"
+        >Nyeste indlæg</Heading
+      >
+      <BlogPostCard2
         img="/img/blogpost2.webp"
         alttext="Gruppebillede foran bjerge"
         topic="Forældreguide"
         date="21. Oktober 2025"
         heading="Sikkerhed, fællesskab og eventyr – alt forældre bør vide"
         text="Få ro i maven, inden dit barn rejser ud i verden. Læs hvordan vi sikrer tryghed, nærvær og fantastiske oplevelser på vores højskoleophold."
+        stylingclasses="lg:col-start-7 lg:col-end-10 lg:row-start-3 lg:row-end-4"
       />
-      <BlogPostCard
+      <BlogPostCard2
         img="/img/blogpost3.webp"
         alttext="Gruppebillede foran pyramide"
         topic="Tips & tricks"
         date="24. Oktober 2025"
         heading="Sådan planlægger du et sabbatår fyldt med rejser og eventyr"
         text="Drømmer du om et sabbatår, der giver mening? Her får du tips til, hvordan du kombinerer fællesskab, oplevelser og personlig udvikling i udlandet."
+        stylingclasses="lg:col-start-10 lg:col-end-13 lg:row-start-3 lg:row-end-3"
       />
+      <div
+        class="flex lg:row-start-4 lg:col-start-7 lg:col-end-13 lg:place-self-end"
+      >
+        <Button variant="secondary" stylingclasses="ml-auto"
+          >Opdag alle blog-indlæg</Button
+        >
+      </div>
     </section>
   </main>
 </MainLayout>
