@@ -59,8 +59,8 @@
 @font-face {
   font-family: "Titillium Web";
   src:
-    url("/fonts/TitilliumWeb-Regular.woff2") format("woff2"),
-    url("/fonts/TitilliumWeb-Regular.woff") format("woff");
+    url("/fonts/titilliumweb-black-webfont.woff2") format("woff2"),
+    url("/fonts/titilliumweb-black-webfont.woff") format("woff");
 }
 
 @theme {
