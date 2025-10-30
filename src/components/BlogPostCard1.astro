@@ -13,7 +13,10 @@ import Heading from "./Heading.astro";
 ---
 
 <article
-  class:list={["bg-off-white mb-10 rounded-[5px] lg:mb-0", stylingclasses]}
+  class:list={[
+    "bg-off-white mb-10 rounded-[5px] lg:mb-0 transition-transform duration-300 hover:scale-[1.02]",
+    stylingclasses,
+  ]}
 >
   <img src={img} alt={alttext} class="" />
   <div class="flex flex-row justify-between px-4 pt-4 pb-2">

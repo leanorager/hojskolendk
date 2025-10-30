@@ -12,7 +12,12 @@ import Text from "../components/Text.astro";
 import Heading from "./Heading.astro";
 ---
 
-<article class:list={["bg-off-white mb-10 rounded-[5px]", stylingclasses]}>
+<article
+  class:list={[
+    "bg-off-white mb-10 rounded-[5px] transition-transform duration-300 hover:scale-[1.035]",
+    stylingclasses,
+  ]}
+>
   <img src={img} alt={alttext} class="" />
   <div class="flex flex-row justify-between px-4 pt-4 pb-2">
     <Text teksttype="p_medium" stylingclasses="text-orange">
