@@ -9,6 +9,7 @@ import Button from "../components/Button.astro";
 import ReviewCard from "../components/ReviewCard.astro";
 import BlogPostCard1 from "../components/BlogPostCard1.astro";
 import BlogPostCard2 from "../components/BlogPostCard2.astro";
+import PopularCard from "../components/PopularCard.astro";
 ---
 
 <MainLayout title="Titel">
@@ -95,7 +96,45 @@ import BlogPostCard2 from "../components/BlogPostCard2.astro";
         />
       </div>
     </section>
-    <section id="popular"></section>
+    <section id="popular" class="pb-20 lg:pb-25">
+      <Heading
+        size="h1"
+        htmlheading="h1"
+        stylingclasses="border-b-1 border-black pb-4 mx-4 mb-10 lg:col-start-1 lg:col-end-13"
+        >Populære rejser</Heading
+      >
+      <div
+        class="w-[100dvw] overflow-x-auto snap-x snap-mandatory
+         [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        <div class="flex flex-row gap-0 lg:px-0">
+          <PopularCard
+            img="/img/rejse1.webp"
+            days="60"
+            destination="Brasilien, Mexico, Costa Rica, & Colombia"
+            price="57.900"
+            text="Oplev farverige kulturer, tropiske regnskove og pulserende byer, mens du rejser gennem Mexico, Costa Rica og Colombia. Tre lande, uendelige oplevelser – klar til at skabe minder for livet."
+          />
+          <PopularCard
+            img="/img/rejse2.webp"
+            days="90"
+            destination="HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS"
+            price="85.499"
+            text="Fra New Yorks skylines til Balis palmer – denne jordomrejse samler det bedste fra hele verden. Oplev Hawaiis vulkaner, Australiens surf, Japans kultur og livet i paradiset Gili Islands. Et episk eventyr fyldt med kontraster, fællesskab og frihed."
+          />
+          <PopularCard
+            img="/img/rejse3.webp"
+            days="16"
+            destination="Japan og Sydkorea"
+            price="53,999"
+            text="Oplev to fascinerende kulturer på ét højskoleophold. Fra Seouls storbyliv og Busans strande til Tokyos energi og Kyotos ro – en rejse fyldt med kultur, fællesskab og eventyr."
+          />
+        </div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <Button variant="secondary">Se alle destinationer</Button>
+      </div>
+    </section>
     <section id="reviews" class="bg-off-white py-20 lg:py-25">
       <Heading
         size="h1"
