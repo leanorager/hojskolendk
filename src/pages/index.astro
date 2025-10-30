@@ -7,6 +7,7 @@ import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 import ReviewCard from "../components/ReviewCard.astro";
+import BlogPostCard from "../components/BlogPostCard.astro";
 ---
 
 <MainLayout title="Titel">
@@ -317,7 +318,37 @@ import ReviewCard from "../components/ReviewCard.astro";
           <Heading size="h3" htmlheading="h3" stylingclasses="">Online</Heading>
         </article>
       </div>
-      <section id="blog_posts"></section>
+    </section>
+    <section id="blog_posts" class="px-4 py-20 lg:py-25">
+      <Heading
+        size="h1"
+        htmlheading="h1"
+        stylingclasses="border-b-1 border-black pb-4">Blog-indlæg</Heading
+      >
+      <BlogPostCard
+        img="/img/blogpost1.webp"
+        alttext="Natur, vandfald og tempel"
+        topic="Rejseinspiration"
+        date="4. Marts 2025"
+        heading="5 destinationer, der ændrer måden du ser verden på"
+        text="Vi har samlet fem unikke destinationer, hvor kultur, natur og mødet med mennesker giver dig oplevelser, du aldrig glemmer – og måske endda et nyt syn på livet."
+      />
+      <BlogPostCard
+        img="/img/blogpost2.webp"
+        alttext="Gruppebillede foran bjerge"
+        topic="Forældreguide"
+        date="21. Oktober 2025"
+        heading="Sikkerhed, fællesskab og eventyr – alt forældre bør vide"
+        text="Få ro i maven, inden dit barn rejser ud i verden. Læs hvordan vi sikrer tryghed, nærvær og fantastiske oplevelser på vores højskoleophold."
+      />
+      <BlogPostCard
+        img="/img/blogpost3.webp"
+        alttext="Gruppebillede foran pyramide"
+        topic="Tips & tricks"
+        date="24. Oktober 2025"
+        heading="Sådan planlægger du et sabbatår fyldt med rejser og eventyr"
+        text="Drømmer du om et sabbatår, der giver mening? Her får du tips til, hvordan du kombinerer fællesskab, oplevelser og personlig udvikling i udlandet."
+      />
     </section>
   </main>
 </MainLayout>
