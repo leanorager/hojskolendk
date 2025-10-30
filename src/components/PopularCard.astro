@@ -6,7 +6,10 @@ import Button from "../components/Button.astro";
 ---
 
 <article
-  class="popular-card flex flex-col gap-2 pt-50 px-4 pb-20 lg:grid lg:grid-cols-12 lg:gap-4"
+  class="popular-card flex flex-col justify-end gap-2
+         w-full min-w-full h-[100svh] flex-none
+         px-4 pb-20 pt-50 snap-start
+          lg:h-auto lg:grid lg:grid-cols-12 lg:gap-4 lg:px-0"
   style={`background-image: url('${img}'); background-size: cover; background-position: center;`}
 >
   <Heading
