@@ -1,22 +1,39 @@
 ---
-// Henter parametrene fra Astro.props
-const { variant= "primary", size = "medium" } = Astro.props; 
- 
-//Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4"; 
- 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
-const variantClasses = {
-"primary": "border-black hover:bg-black hover:text-white hover:-skew-x-12 transition-all duration-700", /* border-primary-500 */
-"secondary": "border-blue-500 hover:bg-blue-500 hover:border-blue-200" /* border-secondary-500 */
+import Heading from "./Heading.astro";
+
+const {
+  variant = "primary",
+  size = "medium",
+  label,
+  heading = {},
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center rounded-[5px] transition-all duration-200 border-2";
+const variants = {
+  primary:
+    "bg-[var(--color-orange)] text-[var(--color-white)] border-[var(--color-orange)] hover:bg-transparent hover:text-[var(--color-orange)]",
+  secondary:
+    "bg-transparent text-[var(--color-orange)] border-[var(--color-orange)] hover:bg-[var(--color-orange)] hover:text-[var(--color-white)]",
 };
- 
-//Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
-const sizeClasses = {
-"large": "text-4xl",
-"medium": "text-xl",
-"small": "text-large"
+const sizes = {
+  large: "px-8 py-4",
+  medium: "px-[20px] py-[8px]",
+  small: "px-6 py-2",
 };
+
+// brug h4 som på index – og lad være med at tilføje font-vægt herfra
+const headingHtml = heading.htmlheading ?? "span";
+const headingSize = heading.size ?? "h4";
+const headingStyling = heading.stylingclasses ?? "";
 ---
-<!--Sæt classes for den pågældende knap sammen ved hjælp af Astros class:list -->
-<button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
+
+<button class:list={[base, variants[variant], sizes[size]]}>
+  <Heading
+    htmlheading={headingHtml}
+    size={headingSize}
+    stylingclasses={headingStyling}
+  >
+    {Astro.slots.default ? <slot /> : label}
+  </Heading>
+</button>
